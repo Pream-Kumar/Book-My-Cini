@@ -18,7 +18,7 @@ public class TheaterService {
 		return theaterRepo.save(theater);
 	} // Create
 	
-	public List<Theater> getAllTheater(Theater theater) {
+	public List<Theater> getAllTheater() {
 		return theaterRepo.findAll();
 	} // Read All
 	
