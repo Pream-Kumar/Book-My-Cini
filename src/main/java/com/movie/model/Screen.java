@@ -24,7 +24,7 @@ public class Screen {
 
     @ManyToOne
     @JoinColumn(name = "theater_id")
-    @JsonBackReference
+//    @JsonBackReference
     private Theater theater;
 
     private int screenNumber;

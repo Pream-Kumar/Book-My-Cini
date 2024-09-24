@@ -25,7 +25,7 @@ public class Theater {
     private int numberOfScreens;
 
     @OneToMany(mappedBy = "theater")
-    @JsonManagedReference
+//    @JsonManagedReference
     private List<Screen> screens;
 
     // Constructors, Getters, Setters
