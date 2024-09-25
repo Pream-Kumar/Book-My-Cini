@@ -12,14 +12,14 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class PaymentData {
+public class PaymentDto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long paymentId;
 
     @OneToOne
     @JoinColumn(name = "booking_id")
-    private BookingData booking;
+    private BookingDto booking;
 
     private double amountPaid;
     private String paymentMethod; // Credit Card, PayPal, etc.

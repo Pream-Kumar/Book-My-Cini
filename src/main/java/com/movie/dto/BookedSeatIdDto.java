@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class BookedSeatIdData implements Serializable {
+public class BookedSeatIdDto implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	private Long booking;

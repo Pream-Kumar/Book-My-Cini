@@ -13,7 +13,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class TheaterData {
+public class TheaterDto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long theaterId;
@@ -24,7 +24,7 @@ public class TheaterData {
 
     @OneToMany(mappedBy = "theater")
     @JsonManagedReference
-    private List<ScreenData> screens;
+    private List<ScreenDto> screens;
 
     // Constructors, Getters, Setters
 }

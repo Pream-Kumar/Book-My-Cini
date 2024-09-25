@@ -14,7 +14,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class MovieData {
+public class MovieDto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long movieId;

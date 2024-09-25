@@ -19,7 +19,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class BookingData {
+public class BookingDto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bookingId;
@@ -36,7 +36,7 @@ public class BookingData {
     private double totalPrice;
 
     @OneToMany(mappedBy = "booking")
-    private List<BookedSeatData> bookedSeats;
+    private List<BookedSeatDto> bookedSeats;
 
     @OneToOne(mappedBy = "booking")
     private Payment payment;

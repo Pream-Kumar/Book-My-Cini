@@ -14,24 +14,24 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ShowtimeData {
+public class ShowtimeDto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long showtimeId;
 
     @ManyToOne
     @JoinColumn(name = "movie_id")
-    private MovieData movie;
+    private MovieDto movie;
 
     @ManyToOne
     @JoinColumn(name = "screen_id")
-    private ScreenData screen;
+    private ScreenDto screen;
 
     private LocalDateTime startTime;
     private LocalDateTime endTime;
 
     @OneToMany(mappedBy = "showtime")
-    private List<BookingData> bookings;
+    private List<BookingDto> bookings;
 
     // Constructors, Getters, Setters
 }

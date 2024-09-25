@@ -17,7 +17,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ScreenData {
+public class ScreenDto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long screenId;
@@ -31,7 +31,7 @@ public class ScreenData {
     private int capacity;
 
     @OneToMany(mappedBy = "screen")
-    private List<Seat> seats;
+    private List<SeatDto> seatDtos;
 
     @OneToMany(mappedBy = "screen")
     private List<Showtime> showtimes;

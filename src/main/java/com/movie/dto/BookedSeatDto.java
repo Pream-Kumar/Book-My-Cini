@@ -9,7 +9,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @IdClass(BookedSeatId.class)
-public class BookedSeatData {
+public class BookedSeatDto {
 
     @Id
     @ManyToOne
@@ -19,7 +19,7 @@ public class BookedSeatData {
     @Id
     @ManyToOne
     @JoinColumn(name = "seat_id")
-    private Seat seat;
+    private SeatDto seatDto;
 
     // Constructors, Getters, Setters
 }

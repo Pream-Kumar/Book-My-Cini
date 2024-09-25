@@ -12,7 +12,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UserData {
+public class UserDto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
@@ -24,7 +24,7 @@ public class UserData {
     private LocalDateTime createdAt;
 
     @OneToMany(mappedBy = "user")
-    private List<BookingData> bookings;
+    private List<BookingDto> bookings;
 
     // Constructors, Getters, Setters
 }
