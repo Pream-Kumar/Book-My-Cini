@@ -25,6 +25,43 @@ public class PaymentDto {
     private String paymentMethod; // Credit Card, PayPal, etc.
     private String paymentStatus; // Success, Pending, Failed
     private LocalDateTime paymentDate;
+	public Long getPaymentId() {
+		return paymentId;
+	}
+	public void setPaymentId(Long paymentId) {
+		this.paymentId = paymentId;
+	}
+	public BookingDto getBooking() {
+		return booking;
+	}
+	public void setBooking(BookingDto booking) {
+		this.booking = booking;
+	}
+	public double getAmountPaid() {
+		return amountPaid;
+	}
+	public void setAmountPaid(double amountPaid) {
+		this.amountPaid = amountPaid;
+	}
+	public String getPaymentMethod() {
+		return paymentMethod;
+	}
+	public void setPaymentMethod(String paymentMethod) {
+		this.paymentMethod = paymentMethod;
+	}
+	public String getPaymentStatus() {
+		return paymentStatus;
+	}
+	public void setPaymentStatus(String paymentStatus) {
+		this.paymentStatus = paymentStatus;
+	}
+	public LocalDateTime getPaymentDate() {
+		return paymentDate;
+	}
+	public void setPaymentDate(LocalDateTime paymentDate) {
+		this.paymentDate = paymentDate;
+	}
 
     // Constructors, Getters, Setters
+    
 }

@@ -9,7 +9,15 @@ public class ShowtimeMapper {
 		showtimeDto.setShowtimeId(showtime.getShowtimeId());
 		showtimeDto.setStartTime(showtime.getStartTime());
 		showtimeDto.setEndTime(showtime.getEndTime());
-		showtimeDto.setBookings(showtime.getBookings());
 		return showtimeDto;
+	}
+	
+	
+	public static Showtime toEntity(ShowtimeDto showtimeDto) {
+		Showtime showtime = new Showtime();
+		showtime.setShowtimeId(showtimeDto.getShowtimeId());
+		showtime.setStartTime(showtimeDto.getStartTime());
+		showtime.setEndTime(showtimeDto.getEndTime());
+		return showtime;
 	}
 }

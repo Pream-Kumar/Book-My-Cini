@@ -41,5 +41,62 @@ public class BookingDto {
     @OneToOne(mappedBy = "booking")
     private Payment payment;
 
+	public Long getBookingId() {
+		return bookingId;
+	}
+
+	public void setBookingId(Long bookingId) {
+		this.bookingId = bookingId;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public Showtime getShowtime() {
+		return showtime;
+	}
+
+	public void setShowtime(Showtime showtime) {
+		this.showtime = showtime;
+	}
+
+	public LocalDateTime getBookingDate() {
+		return bookingDate;
+	}
+
+	public void setBookingDate(LocalDateTime bookingDate) {
+		this.bookingDate = bookingDate;
+	}
+
+	public double getTotalPrice() {
+		return totalPrice;
+	}
+
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
+	public List<BookedSeatDto> getBookedSeats() {
+		return bookedSeats;
+	}
+
+	public void setBookedSeats(List<BookedSeatDto> bookedSeats) {
+		this.bookedSeats = bookedSeats;
+	}
+
+	public Payment getPayment() {
+		return payment;
+	}
+
+	public void setPayment(Payment payment) {
+		this.payment = payment;
+	}
+
     // Constructors, Getters, Setters
+    
 }

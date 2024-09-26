@@ -8,10 +8,31 @@ import lombok.Setter;
 @Getter
 @Setter
 public class BookedSeatId implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
 	private Long booking;
-    private Long seat;
+	private Long seat;
 
-    // Constructors, equals(), and hashCode()
+	public Long getBooking() {
+		return booking;
+	}
+
+	public void setBooking(Long booking) {
+		this.booking = booking;
+	}
+
+	public Long getSeat() {
+		return seat;
+	}
+
+	public void setSeat(Long seat) {
+		this.seat = seat;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	// Constructors, equals(), and hashCode()
+
 }
