@@ -2,6 +2,7 @@ com\movie\mapper\UserMapper.class
 com\movie\controller\BookingController.class
 com\movie\repository\UserRepository.class
 com\movie\model\User.class
+com\movie\mapper\BookedSeatIdMapper.class
 com\movie\controller\MovieController.class
 com\movie\dto\SeatDto.class
 com\movie\model\Screen.class
@@ -19,16 +20,20 @@ com\movie\model\Movie.class
 com\movie\dto\BookingDto.class
 com\movie\repository\MovieRepository.class
 com\movie\model\BookedSeat.class
+com\movie\mapper\SeatMapper.class
 com\movie\repository\BookedSeatRepository.class
 com\movie\dto\BookedSeatDto.class
 com\movie\dto\UserDto.class
 com\movie\dto\TheaterDto.class
 com\movie\mapper\TheaterMapper.class
 com\movie\repository\SeatRepository.class
+com\movie\mapper\BookedSeatMapper.class
 com\movie\model\Showtime.class
 com\movie\service\BookingService.class
+com\movie\mapper\ScreenMapper.class
 com\movie\model\Theater.class
 com\movie\dto\MovieDto.class
+com\movie\mapper\BookingMapper.class
 com\movie\repository\TheaterRepository.class
 com\movie\repository\BookingRepository.class
 com\movie\service\PaymentService.class
@@ -38,6 +43,7 @@ com\movie\controller\SeatController.class
 com\movie\BookMyCineApplication.class
 com\movie\dto\BookedSeatIdDto.class
 com\movie\controller\ScreenController.class
+com\movie\mapper\PaymentMapper.class
 com\movie\controller\UserController.class
 com\movie\controller\PaymentController.class
 com\movie\model\BookedSeatId.class
@@ -47,3 +53,4 @@ com\movie\model\Seat.class
 com\movie\repository\ShowtimeRepository.class
 com\movie\controller\BookedSeatController.class
 com\movie\service\ScreenService.class
+com\movie\mapper\MovieMapper.class
