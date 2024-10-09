@@ -1,8 +1,11 @@
 package com.movie.mapper;
 
+import org.springframework.stereotype.Component;
+
 import com.movie.dto.ScreenDto;
 import com.movie.model.Screen;
 
+@Component
 public class ScreenMapper {
 	public static ScreenDto toDto(Screen screen) {
 		ScreenDto screenDto = new ScreenDto();

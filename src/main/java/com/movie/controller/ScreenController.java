@@ -58,6 +58,7 @@ public class ScreenController {
         Optional<Screen> screen = screenService.getScreenById(id);
         if (screen.isPresent()) {
             screenService.deleteScreen(id);
+            System.out.println("Screen Deleted Successfully");
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
