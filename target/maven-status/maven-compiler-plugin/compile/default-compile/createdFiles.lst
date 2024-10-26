@@ -53,4 +53,5 @@ com\movie\model\Seat.class
 com\movie\repository\ShowtimeRepository.class
 com\movie\controller\BookedSeatController.class
 com\movie\service\ScreenService.class
+com\movie\service\SeatService.class
 com\movie\mapper\MovieMapper.class
