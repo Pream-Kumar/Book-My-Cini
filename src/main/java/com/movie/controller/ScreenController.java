@@ -2,7 +2,6 @@ package com.movie.controller;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,32 +29,31 @@ public class ScreenController {
 	
 	@GetMapping("/getAllScreens")
 	public List<ScreenDto>getAllScreens(){
-		return screenService.getAllScreens().stream()
-				.map(ScreenMapper::toDto)
-				.collect(Collectors.toList());
+		return screenService.getAllScreens();
 	}
 	
 	
 	  // Get a screen by ID
-    @GetMapping("/getScreenById/{id}")
-    public ResponseEntity<ScreenDto> getScreenById(@PathVariable Long id) {
-        Optional<Screen> screen = screenService.getScreenById(id);
-        return screen.map(value -> ResponseEntity.ok(screenMapper.toDto(value)))
-                     .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
-    }
+	@GetMapping("/getScreenById/{id}")
+	public ResponseEntity<ScreenDto> getScreenById(@PathVariable Long id) {
+	    Optional<ScreenDto> screen = screenService.getScreenById(id);
+	    return screen.map(ResponseEntity::ok)
+	                 .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+	}
+
     
     // Add a new screen
     @PostMapping("/addNewScreen")
     public ResponseEntity<ScreenDto> addScreen(@RequestBody ScreenDto screenDTO) {
         Screen screen = screenMapper.toEntity(screenDTO);
-        Screen newScreen = screenService.addScreen(screen);
-        return ResponseEntity.status(HttpStatus.CREATED).body(screenMapper.toDto(newScreen));
+        Screen savedScreen = screenService.addScreen(screen);
+        return ResponseEntity.status(HttpStatus.CREATED).body(screenMapper.toDto(savedScreen));
     }
 	
     // Delete a screen by ID
     @DeleteMapping("/deleteScreen/{id}")
     public ResponseEntity<Void> deleteScreen(@PathVariable Long id) {
-        Optional<Screen> screen = screenService.getScreenById(id);
+        Optional<ScreenDto> screen = screenService.getScreenById(id);
         if (screen.isPresent()) {
             screenService.deleteScreen(id);
             System.out.println("Screen Deleted Successfully");
