@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.movie.exception.UserNotFoundException;
 import com.movie.model.User;
 import com.movie.repository.UserRepository;
 
@@ -29,9 +30,9 @@ public class UserService {
 		return userRepo.save(user);
 	}
 	
-	public User findByName(String name) {
-		return userRepo.getByName(name);
-	}
+//	public User findByName(String name) {
+//		return userRepo.getByName(name);
+//	}
 	
 	public String deleteUserByName(String name) {
         if(userRepo.getByName(name) != null) {
@@ -39,7 +40,7 @@ public class UserService {
         }
         else
         	return "User not exists";
-		return "User"+ name + " is Deleted";
+		return "User "+ name + " is Deleted";
     }
 	
 	public String deleteUserById(Long userId) {
@@ -48,11 +49,15 @@ public class UserService {
         }
         else
         	return "User not exists";
-        return "User"+ userId + " is Deleted";
+        return "User "+ userId + " is Deleted";
 	}
 	
 
 	public User getUserByName(String name) {
-		return userRepo.findByName(name);
+		User user = userRepo.findByName(name);
+		if(user == null) {
+			throw new UserNotFoundException("User not exists");
+		}
+		return user;
 	}
 }
