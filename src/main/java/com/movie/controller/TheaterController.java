@@ -37,6 +37,16 @@ public class TheaterController {
 		return theaterService.getTheaterByName(name);
 	}
 	
+	@GetMapping("/getTheaterByMovieName/{theatersMovies}")
+	public Optional<Theater> getTheaterByMovieName(@PathVariable String theatersMovies){
+		return theaterService.getTheaterByMovieName(theatersMovies);
+	}
+	
+	@GetMapping("/getTheaterByLocation/{location}")
+	public Optional<List<Theater>> getTheaterByLocation(@PathVariable String location){
+		return theaterService.getTheaterByLocation(location);
+	}
+	
 	@PostMapping("/addNewTheater")
 	public Theater addNewTheater(@RequestBody Theater theater) {
 		return theaterService.addNewTheater(theater);
