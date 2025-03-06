@@ -30,14 +30,6 @@ public class TheaterService {
 		return theaterRepo.findByName(name);
 	} // Read by Name
 	
-	public Optional<Theater> getTheaterByMovieName(String theatersMovies) {
-		return theaterRepo.findBytheatersMovies(theatersMovies); // Read by movie name
-	} // Filter by movie name
-	
-	public Optional<List<Theater>> getTheaterByLocation(String location) {
-		return theaterRepo.findByLocation(location);
-	} // get theater by location
-	
 	public String deleteTheater(Long theaterId) {
 		if(theaterRepo.getReferenceById(theaterId) != null) {
         	theaterRepo.deleteById(theaterId);
@@ -48,8 +40,4 @@ public class TheaterService {
 		return "Theater deleted successfully";
 //		movieRepo.deleteById(movieId);
 	}
-
-	
-
-
 }

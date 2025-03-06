@@ -11,31 +11,35 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-@Data
+@Getter
+@Setter
 public class Booking {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long bookingId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long bookingId;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+	@ManyToOne
+	@JoinColumn(name = "user_id")
+	private User user;
 
-    @ManyToOne
-    @JoinColumn(name = "showtime_id")
-    private Showtime showtime;
+	@ManyToOne
+	@JoinColumn(name = "showtime_id")
+	private Showtime showtime;
 
-    private LocalDateTime bookingDate;
-    private double totalPrice;
+	private LocalDateTime bookingDate;
+	private double totalPrice;
 
-    @OneToMany(mappedBy = "booking")
-    private List<BookedSeat> bookedSeats;
+	@OneToMany(mappedBy = "booking")
+	private List<BookedSeat> bookedSeats;
 
-    @OneToOne(mappedBy = "booking")
-    private Payment payment;
+	@OneToOne(mappedBy = "booking")
+	private Payment payment;
 
-    // Constructors, Getters, Setters
+
+	// Constructors, Getters, Setters
+
 }

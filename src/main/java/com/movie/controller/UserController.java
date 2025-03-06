@@ -3,14 +3,15 @@ package com.movie.controller;
 import java.util.List;
 import java.util.Optional;
 
+import com.movie.dto.UserDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.movie.model.User;
@@ -24,19 +25,18 @@ public class UserController {
 	private UserService userService;
 	
 	@GetMapping("/getAllUser")
-	public List<User> getAllUser(){
+	public List<UserDto> getAllUser(){
 		return userService.getAllUser();
 	}
 	
-	@GetMapping("/getUserById/{id}")
-	public Optional<User> getUserById(@PathVariable Long id){
+	@GetMapping("/getUser/{id}")
+	public Optional<UserDto> getUserById(@PathVariable Long id){
 		return userService.getUserById(id);
 	}
 	
-	@GetMapping("/getUserByName/{name}")
-	public ResponseEntity<User> getUserByName(@PathVariable String name) {
-		User user = userService.getUserByName(name);
-		return ResponseEntity.ok(user);
+	@GetMapping("/getUser/{name}")
+	public User findByName(@PathVariable String name) {
+		return userService.getUserByName(name);
 	}
 	
 	@PostMapping("/createUser")

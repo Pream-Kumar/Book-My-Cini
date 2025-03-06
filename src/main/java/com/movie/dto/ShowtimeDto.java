@@ -33,5 +33,55 @@ public class ShowtimeDto {
     @OneToMany(mappedBy = "showtime")
     private List<BookingDto> bookings;
 
+	public Long getShowtimeId() {
+		return showtimeId;
+	}
+
+	public void setShowtimeId(Long showtimeId) {
+		this.showtimeId = showtimeId;
+	}
+
+	public MovieDto getMovie() {
+		return movie;
+	}
+
+	public void setMovie(MovieDto movie) {
+		this.movie = movie;
+	}
+
+	public ScreenDto getScreen() {
+		return screen;
+	}
+
+	public void setScreen(ScreenDto screen) {
+		this.screen = screen;
+	}
+
+	public LocalDateTime getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(LocalDateTime startTime) {
+		this.startTime = startTime;
+	}
+
+	public LocalDateTime getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(LocalDateTime endTime) {
+		this.endTime = endTime;
+	}
+
+	public List<BookingDto> getBookings() {
+		return bookings;
+	}
+
+	public void setBookings(List<BookingDto> bookings) {
+		this.bookings = bookings;
+	}
+
     // Constructors, Getters, Setters
+    
+    
 }

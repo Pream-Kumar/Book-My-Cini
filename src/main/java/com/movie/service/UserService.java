@@ -3,10 +3,11 @@ package com.movie.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.movie.dto.UserDto;
+import com.movie.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.movie.exception.UserNotFoundException;
 import com.movie.model.User;
 import com.movie.repository.UserRepository;
 
@@ -18,21 +19,23 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepo;
 	
-	public List<User> getAllUser(){
-		return userRepo.findAll();
+	public List<UserDto> getAllUser(){
+		List<User> users = userRepo.findAll();
+		return users.stream().map(UserMapper::toDTO).toList();
 	}
 	
-	public Optional<User> getUserById(Long userId){
-		return userRepo.findById(userId);
+	public Optional<UserDto> getUserById(Long userId){
+		userRepo.findById(userId);
+		return Optional.of(UserMapper.toDTO(userRepo.findById(userId).get()));
 	}
 	
 	public User createUser(User user) {
 		return userRepo.save(user);
 	}
 	
-//	public User findByName(String name) {
-//		return userRepo.getByName(name);
-//	}
+	public User findByName(String name) {
+		return userRepo.getByName(name);
+	}
 	
 	public String deleteUserByName(String name) {
         if(userRepo.getByName(name) != null) {
@@ -40,7 +43,7 @@ public class UserService {
         }
         else
         	return "User not exists";
-		return "User "+ name + " is Deleted";
+		return "User"+ name + " is Deleted";
     }
 	
 	public String deleteUserById(Long userId) {
@@ -49,15 +52,11 @@ public class UserService {
         }
         else
         	return "User not exists";
-        return "User "+ userId + " is Deleted";
+        return "User"+ userId + " is Deleted";
 	}
 	
 
 	public User getUserByName(String name) {
-		User user = userRepo.findByName(name);
-		if(user == null) {
-			throw new UserNotFoundException("User not exists");
-		}
-		return user;
+		return userRepo.findByName(name);
 	}
 }

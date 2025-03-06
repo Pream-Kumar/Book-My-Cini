@@ -11,20 +11,22 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Entity
 @Data
+@Entity
 public class Showtime {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long showtimeId;
 
-    @ManyToOne
-    @JoinColumn(name = "movie_id")
-    private Movie movie;
+//    @ManyToOne
+//    @JoinColumn(name = "movie_id")
+//    private Movie movie;
 
     @ManyToOne
-    @JoinColumn(name = "screen_id")
+    @JoinColumn(name = "screen_showtime")
     private Screen screen;
 
     private LocalDateTime startTime;
@@ -33,5 +35,12 @@ public class Showtime {
     @OneToMany(mappedBy = "showtime")
     private List<Booking> bookings;
 
+    @ManyToOne
+    @JoinColumn(name = "theater_id")
+    private Theater theater;
+
+
     // Constructors, Getters, Setters
+    
+    
 }

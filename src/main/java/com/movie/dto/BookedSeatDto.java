@@ -19,7 +19,7 @@ public class BookedSeatDto {
     @Id
     @ManyToOne
     @JoinColumn(name = "seat_id")
-    private SeatDto seat;
+    private SeatDto seatDto;
 
     // Constructors, Getters, Setters
 }

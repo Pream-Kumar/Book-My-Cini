@@ -2,14 +2,21 @@ package com.movie.model;
 
 import java.io.Serializable;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class BookedSeatId implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
 	private Long booking;
-    private Long seat;
+	private Long seat;
 
-    // Constructors, equals(), and hashCode()
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	// Constructors, equals(), and hashCode()
+
 }

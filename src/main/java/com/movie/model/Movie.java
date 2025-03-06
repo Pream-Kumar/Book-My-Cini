@@ -1,18 +1,17 @@
 package com.movie.model;
 
-import java.time.LocalDate;
-import java.util.List;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.OneToMany;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.time.LocalDate;
 
 @Entity
-@Data
+@Getter
+@Setter
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,10 +25,9 @@ public class Movie {
     private String language;
     private String description;
 
-    @OneToMany(mappedBy = "movie")
-    private List<Showtime> showtimes;
+//    @OneToMany(mappedBy = "movie")
+//    private List<Showtime> showtimes;
+
     
-    @ManyToMany
-    private List<Theater> movieRunningTheaters;
 
 }

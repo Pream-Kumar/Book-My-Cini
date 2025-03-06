@@ -25,6 +25,8 @@ public class TheaterDto {
     @OneToMany(mappedBy = "theater")
     @JsonManagedReference
     private List<ScreenDto> screens;
+    
+    
 
     // Constructors, Getters, Setters
 }
