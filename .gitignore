@@ -1,1 +1,17 @@
+# Ignore class files
+*.class
+
+# Ignore compiled Java binaries and build directories
+/bin/
 /target/
+/out/
+
+# Ignore IDE files
+*.iml
+.idea/
+*.log
+*.swp
+
+# Ignore dependency directories
+/.mvn/
+/.gradle/

@@ -4,18 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="882022e1-3b71-4c07-83dc-b2ce3605e56c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movie/service/SeatService.java" afterDir="false" />
+    <list default="true" id="882022e1-3b71-4c07-83dc-b2ce3605e56c" name="Changes" comment="working with seat entity, error not solved in jpa">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/controller/SeatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/controller/SeatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/model/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/model/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/dto/StripeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/dto/StripeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/enums/PaymentMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/enums/PaymentMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/enums/PaymentStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/enums/PaymentStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/model/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/model/Seat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/repository/SeatRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/repository/SeatRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/service/StripeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/service/SeatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/service/SeatService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/movie/model/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movie/model/Screen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/movie/model/Seat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movie/model/Seat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/movie/BookMyCineApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/movie/BookMyCineApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +43,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Pream-Kumar&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Pream-Kumar/Book-My-Cini.git&quot;,
+    &quot;accountId&quot;: &quot;4bffe5ba-04a1-4e8d-bd31-7b1296863688&quot;
+  }
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
@@ -103,6 +122,35 @@
       <option name="presentableId" value="Default" />
       <updated>1728661449250</updated>
     </task>
+    <task id="LOCAL-00001" summary="working with seat entity, error not solved in jpa">
+      <option name="closed" value="true" />
+      <created>1741798968703</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741798968703</updated>
+    </task>
+    <task id="LOCAL-00002" summary="working with seat entity, error not solved in jpa">
+      <option name="closed" value="true" />
+      <created>1741799028457</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741799028457</updated>
+    </task>
+    <task id="LOCAL-00003" summary="working with seat entity, error not solved in jpa">
+      <option name="closed" value="true" />
+      <created>1741799046837</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741799046837</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="working with seat entity, error not solved in jpa" />
+    <option name="LAST_COMMIT_MESSAGE" value="working with seat entity, error not solved in jpa" />
   </component>
 </project>

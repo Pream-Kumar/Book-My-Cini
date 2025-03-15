@@ -32,7 +32,7 @@ public class SeatService {
                     seat.setSeatNumber(updatedSeat.getSeatNumber());
                     seat.setType(updatedSeat.getType());
                     seat.setPrice(updatedSeat.getPrice());
-                    seat.set_booked(updatedSeat.is_booked());
+                    seat.setBooked(updatedSeat.isBooked());
                     return seatRepo.save(seat);
                 })
                 .orElseThrow(() -> new RuntimeException("Seat not found"));
@@ -48,23 +48,23 @@ public class SeatService {
 
     public boolean isSeatAvailable(Long seatId) {
         Optional<Seat> seat = seatRepo.findById(seatId);
-        return seat.map(s -> !s.is_booked()).orElse(false);
+        return seat.map(s -> !s.isBooked()).orElse(false);
     }
 
 
     public Seat bookSeat(Long seatId) {
         Seat seat = seatRepo.findById(seatId).orElseThrow(() -> new RuntimeException("Seat not found"));
-        if (seat.is_booked()) {
+        if (seat.isBooked()) {
             throw new RuntimeException("Seat is already booked");
         }
-        seat.set_booked(true);
+        seat.setBooked(true);
         return seatRepo.save(seat);
     }
 
 
     // Fetch available seats (not booked)
     public List<Seat> getAvailableSeats(Long screenId) {
-        return seatRepo.findByScreenIdAndIsBookedFalse(screenId);
+        return seatRepo.findByScreen_ScreenIdAndBookedFalse(screenId);
     }
 
     // Book selected seats
@@ -73,13 +73,13 @@ public class SeatService {
 
         // Check if all selected seats are available
         for (Seat seat : seats) {
-            if (seat.is_booked()) {
+            if (seat.isBooked()) {
                 throw new RuntimeException("Seat " + seat.getSeatNumber() + " is already booked!");
             }
         }
 
         // Mark seats as booked
-        seats.forEach(seat -> seat.set_booked(true));
+        seats.forEach(seat -> seat.setBooked(true));
 
         return seatRepo.saveAll(seats);
     }

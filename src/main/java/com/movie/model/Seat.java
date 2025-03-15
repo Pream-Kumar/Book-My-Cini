@@ -16,14 +16,14 @@ public class Seat {
     private Long seatId;
 
     @ManyToOne
-//    @JsonBackReference
+    //    @JsonBackReference
     @JoinColumn(name = "screen_id")
     private Screen screen;
 
     private String seatNumber;
     private String type; // Standard, VIP, etc.
     private double price;
-    private boolean is_booked;
+    private boolean booked;
     @OneToMany(mappedBy = "seat")
     private List<BookedSeat> bookedSeats;
 }
