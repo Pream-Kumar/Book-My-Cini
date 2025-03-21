@@ -5,24 +5,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="882022e1-3b71-4c07-83dc-b2ce3605e56c" name="Changes" comment="working with seat entity, error not solved in jpa">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/BookMyCineApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/BookMyCineApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/controller/BookedSeatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/controller/BookedSeatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/controller/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/controller/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/controller/ScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/controller/ScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/controller/SeatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/controller/SeatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/controller/ShowtimeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/controller/ShowtimeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/controller/TheaterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/controller/TheaterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/dto/BookedSeatDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/dto/BookedSeatDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/dto/BookedSeatIdDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/dto/BookedSeatIdDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/dto/BookingDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/dto/BookingDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/dto/MovieDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/dto/MovieDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/dto/PaymentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/dto/PaymentDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/dto/ScreenDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/dto/ScreenDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/dto/SeatDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/dto/SeatDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/dto/ShowtimeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/dto/ShowtimeDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/dto/StripeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/dto/StripeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/dto/TheaterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/dto/TheaterDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/dto/UserDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/enums/PaymentMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/enums/PaymentMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/enums/PaymentStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/enums/PaymentStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/enums/RoleName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/mapper/BookedSeatIdMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/mapper/BookedSeatIdMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/mapper/BookedSeatMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/mapper/BookedSeatMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/mapper/BookingMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/mapper/BookingMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/mapper/MovieMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/mapper/MovieMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/mapper/PaymentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/mapper/PaymentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/mapper/ScreenMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/mapper/ScreenMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/mapper/SeatMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/mapper/SeatMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/mapper/ShowtimeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/mapper/ShowtimeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/mapper/TheaterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/mapper/TheaterMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/model/BookedSeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/model/BookedSeat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/model/BookedSeatId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/model/BookedSeatId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/model/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/model/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/model/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/model/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/model/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/model/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/model/Screen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/model/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/model/Seat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/model/Showtime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/model/Showtime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/model/Theater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/model/Theater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/repository/BookedSeatRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/repository/BookedSeatRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/repository/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/repository/BookingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/repository/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/repository/MovieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/repository/PaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/repository/PaymentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/repository/ScreenRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/repository/ScreenRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/repository/SeatRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/repository/SeatRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/repository/ShowtimeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/repository/ShowtimeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/repository/TheaterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/repository/TheaterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/security/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/security/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/security/JwtAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/security/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/service/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/service/CustomUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/service/MovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/service/ScreenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/service/ScreenService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/service/SeatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/service/SeatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/service/ShowtimeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/service/ShowtimeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/service/TheaterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/service/TheaterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/movie/BookMyCineApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/movie/BookMyCineApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/movie/model/Seat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movie/model/Seat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/movie/BookMyCineApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/movie/BookMyCineApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movie/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movie/dto/UserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movie/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movie/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movie/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movie/repository/UserRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
