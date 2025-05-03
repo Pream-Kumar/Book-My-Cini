@@ -23,7 +23,8 @@ public class Seat {
     private String seatNumber;
     private String type; // Standard, VIP, etc.
     private double price;
-    private boolean booked;
+    @Column(name = "is_booked", nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
+    private boolean isBooked;
     @OneToMany(mappedBy = "seat")
     private List<BookedSeat> bookedSeats;
 }

@@ -1,13 +1,11 @@
 package com.movie.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Getter
@@ -24,9 +22,10 @@ public class Movie {
     private double rating;
     private String language;
     private String description;
+    private String director;
 
-//    @OneToMany(mappedBy = "movie")
-//    private List<Showtime> showtimes;
+    @OneToMany(mappedBy = "movie")
+    private List<Showtime> showtimes;
 
     
 

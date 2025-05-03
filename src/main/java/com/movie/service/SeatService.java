@@ -19,10 +19,11 @@ public class SeatService {
     }
 
     public Optional<Seat> getSeatById(Long seatId) {
-        return seatRepo.findById(seatId);
+        return seatRepo.findBySeatId(seatId);
     }
 
     public Seat addNewSeat(Seat seat) {
+        boolean b = seat.isBooked() == false;
         return seatRepo.save(seat);
     }
 
@@ -38,8 +39,9 @@ public class SeatService {
                 .orElseThrow(() -> new RuntimeException("Seat not found"));
     }
 
-    public void deleteSeat(Long seatId) {
+    public String deleteSeat(Long seatId) {
         seatRepo.deleteById(seatId);
+        return "Seat deleted successfully";
     }
 
     public List<Seat> getSeatsByScreenId(Long screenId) {
@@ -64,7 +66,7 @@ public class SeatService {
 
     // Fetch available seats (not booked)
     public List<Seat> getAvailableSeats(Long screenId) {
-        return seatRepo.findByScreen_ScreenIdAndBookedFalse(screenId);
+        return seatRepo.findByScreen_ScreenIdAndIsBookedFalse(screenId);
     }
 
     // Book selected seats

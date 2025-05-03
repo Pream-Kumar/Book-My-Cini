@@ -45,7 +45,7 @@ public class Payment {
 
 	@ManyToOne
 	@JoinColumn(name = "booking_id", nullable = false)
-	private Booking booking; // Link to Booking entity
+	private BookingModel booking; // Link to Booking entity
 
 	@Column(nullable = false)
 	private String transactionId; // External transaction ID from the payment gateway

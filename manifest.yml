@@ -1,0 +1,9 @@
+---
+applications:
+  - name: Book-My-Cini
+    memory: 1G
+    instances: 1
+    path: target/movie-0.0.1-SNAPSHOT.jar
+    buildpack: https://github.com/cloudfoundry/java-buildpack
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+ } }'

@@ -23,6 +23,7 @@ public class Screen {
     @JsonBackReference
     private Theater theater;
 
+    private String screenName;
     private int screenNumber;
     private int capacity;
 //    @JsonManagedReference

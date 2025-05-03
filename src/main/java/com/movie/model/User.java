@@ -22,5 +22,5 @@ public class User {
 
 
     @OneToMany(mappedBy = "user")
-    private List<Booking> bookings;
+    private List<BookingModel> bookings;
 }

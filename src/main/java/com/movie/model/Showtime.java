@@ -1,18 +1,11 @@
 package com.movie.model;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.List;
 
 @Data
 @Entity
@@ -21,23 +14,24 @@ public class Showtime {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long showtimeId;
 
-//    @ManyToOne
-//    @JoinColumn(name = "movie_id")
-//    private Movie movie;
+    @ManyToOne
+    @JoinColumn(name = "movie_id")
+    private Movie movie;
 
     @ManyToOne
     @JoinColumn(name = "screen_showtime")
     private Screen screen;
 
-    private LocalDateTime startTime;
-    private LocalDateTime endTime;
+    private LocalDate showDate;
+    private LocalTime startTime;
+    private LocalTime endTime;
 
     @OneToMany(mappedBy = "showtime")
-    private List<Booking> bookings;
+    private List<BookingModel> bookings;
 
-    @ManyToOne
-    @JoinColumn(name = "theater_id")
-    private Theater theater;
+//    @ManyToOne
+//    @JoinColumn(name = "theater_id")
+//    private Theater theater;
 
 
     // Constructors, Getters, Setters

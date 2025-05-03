@@ -1,16 +1,11 @@
 package com.movie.model;
 
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 
 @Entity
 @Getter
@@ -28,8 +23,8 @@ public class Theater {
     @JsonManagedReference
     private List<Screen> screens;
 
-    @OneToMany(mappedBy = "theater")
-    private List<Showtime> showtime;
+//    @OneToMany(mappedBy = "theater")
+//    private List<Showtime> showtime;
 
     // Constructors, Getters, Setters
 }

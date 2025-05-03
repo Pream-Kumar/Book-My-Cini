@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.chrono.ChronoLocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,18 +47,18 @@ public class ShowtimeService {
             // Check if the screen is available (1-hour interval check)
             List<Showtime> existingShowtimes = showtimeRepo.findByScreenId(screenId);
             for (Showtime existingShowtime : existingShowtimes) {
-                if (startTime.isBefore(existingShowtime.getEndTime().plusHours(1)) &&
-                        endTime.isAfter(existingShowtime.getStartTime())) {
+                if (startTime.isBefore(ChronoLocalDateTime.from(existingShowtime.getEndTime().plusHours(1))) &&
+                        endTime.isAfter(ChronoLocalDateTime.from(existingShowtime.getStartTime()))) {
                     throw new RuntimeException("Screen is not available at this time!");
                 }
             }
 
             // Save new showtime
             Showtime showtime = new Showtime();
-            showtime.setTheater(theater.get());
+//            showtime.setTheater(theater.get());
             showtime.setScreen(screen.get());
-            showtime.setStartTime(startTime);
-            showtime.setEndTime(endTime);
+            showtime.setStartTime(LocalTime.from(startTime));
+            showtime.setEndTime(LocalTime.from(endTime));
             return showtimeRepo.save(showtime);
         } else {
             throw new RuntimeException("Theater or Screen not found!");

@@ -22,7 +22,7 @@ public class SeatController {
         return seatService.getAllSeats();
     }
 
-    @GetMapping("/getSeatById/{id}")
+    @GetMapping("/getSeatById/{seatId}")
     public ResponseEntity<Seat> getSeatById(@PathVariable Long seatId) {
         Optional<Seat> seat = seatService.getSeatById(seatId);
         return seat.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
@@ -39,9 +39,8 @@ public class SeatController {
     }
 
     @DeleteMapping("/deleteSeat/{seatId}")
-    public ResponseEntity<Void> deleteSeat(@PathVariable Long seatId) {
-        seatService.deleteSeat(seatId);
-        return ResponseEntity.noContent().build();
+    public String deleteSeat(@PathVariable Long seatId) {
+        return seatService.deleteSeat(seatId);
     }
 
     @GetMapping("/getSeatsByScreen/{screenId}")

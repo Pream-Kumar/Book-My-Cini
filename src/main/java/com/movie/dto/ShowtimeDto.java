@@ -1,19 +1,17 @@
 package com.movie.dto;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.List;
+
 @Getter
 @Setter
+@Data
 public class ShowtimeDto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,8 +25,8 @@ public class ShowtimeDto {
     @JoinColumn(name = "screen_id")
     private ScreenDto screen;
 
-    private LocalDateTime startTime;
-    private LocalDateTime endTime;
+    private LocalTime startTime;
+    private LocalTime endTime;
 
     @OneToMany(mappedBy = "showtime")
     private List<BookingDto> bookings;
@@ -57,20 +55,20 @@ public class ShowtimeDto {
 		this.screen = screen;
 	}
 
-	public LocalDateTime getStartTime() {
+	public LocalTime getStartTime() {
 		return startTime;
 	}
 
-	public void setStartTime(LocalDateTime startTime) {
+	public void setStartTime(LocalTime startTime) {
 		this.startTime = startTime;
 	}
 
-	public LocalDateTime getEndTime() {
+	public LocalTime getEndTime() {
 		return endTime;
 	}
 
 	public void setEndTime(LocalDateTime endTime) {
-		this.endTime = endTime;
+		this.endTime = LocalTime.from(endTime);
 	}
 
 	public List<BookingDto> getBookings() {
@@ -82,6 +80,6 @@ public class ShowtimeDto {
 	}
 
     // Constructors, Getters, Setters
-    
-    
+
+
 }
