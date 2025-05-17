@@ -39,7 +39,7 @@
 //        User user = userRepository.findById(bookingRequest.getUserId()).orElseThrow(() -> new RuntimeException("User not found"));
 //        Showtime showtime = showtimeRepository.findById(bookingRequest.getShowtimeId()).orElseThrow(() -> new RuntimeException("Showtime not found"));
 //
-//        List<Seat> selectedSeats = seatRepository.findBySeat_seatIdAndBookedFalse(bookingRequest.getSeatIds());
+//        List<Seat> selectedSeats = seatRepository.findByScreen_ScreenIdAndIsBookedFalse(bookingRequest.getSeatIds());
 //        if (selectedSeats.size() != bookingRequest.getSeatIds().size()) {
 //            throw new RuntimeException("Some seats are already booked.");
 //        }
